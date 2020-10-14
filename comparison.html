@@ -39,7 +39,8 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="virtualization.html">Virtualization</a>
                     <a class="dropdown-item" href="containerization.html">Containerization</a>
-                    <a class="dropdown-item active" href="comparison.html">Virtualization vs. Containerization<span class="sr-only">(current)</span></a>
+                    <a class="dropdown-item active" href="comparison.html">Virtualization vs. Containerization<span
+                            class="sr-only">(current)</span></a>
                     <a class="dropdown-item" href="...">Creating Web Servers using Docker </a>
                     <a class="dropdown-item" href="...">Basic Linux Commands</a>
                     <a class="dropdown-item" href="...">Connecting Docker With PyCharm</a>
@@ -49,7 +50,72 @@
     </div>
 </nav>
 
-<!-- JavaScript For Team Page -->
-<script language="JavaScript" type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- Content here -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-14">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Virtualization</th>
+                    <th scope="col">Containerization</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Isolation</th>
+                    <td>Provides complete isolation from the host operating system and the other VMs</td>
+                    <td>Typically provides lightweight isolation from the host and other containers, but doesn’t provide
+                        as strong a security boundary as a VM
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Operating System</th>
+                    <td>Runs a complete operating system including the kernel, thus requiring more system resources such
+                        as CPU, memory, and storage
+                    </td>
+                    <td>Runs the user-mode portion of an operating system, and can be tailored to contain just the
+                        needed services for your app using fewer system resources
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Guest compatibility</th>
+                    <td>Runs just about any operating system inside the virtual machine</td>
+                    <td>Runs on the same operating system version as the host</td>
+                </tr>
+                <tr>
+                    <th scope="row">Deployment</th>
+                    <td>Deploy individual VMs by using Hypervisor software
+                    </td>
+                    <td>Deploy individual containers by using Docker or deploy multiple containers by using an orchestrator such as Kubernetes
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Persistent storage</th>
+                    <td>Use a Virtual Hard Disk (VHD) for local storage for a single VM or a Server Message Block (SMB) file share for storage shared by multiple servers
+                    </td>
+                    <td>Use local disks for local storage for a single node or SMB for storage shared by multiple nodes or servers
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Load balancing</th>
+                    <td>Virtual machine load balancing is done by running VMs in other servers in a failover cluster
+                    </td>
+                    <td>An orchestrator can automatically start or stop containers on cluster nodes to manage changes in load and availability.
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Networking</th>
+                    <td>Uses virtual network adapters
+                    </td>
+                    <td>Uses an isolated view of a virtual network adapter. Thus, provides a little less virtualization
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- JavaScript For Team Page -->
+        <script language="JavaScript" type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
