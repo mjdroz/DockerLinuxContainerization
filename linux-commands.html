@@ -167,13 +167,18 @@
                 how to log into your Docker container that is running Ubuntu Linux below.
             </p>
             <ul>
-                <li><strong>First:</strong> Check to see that your Ubuntu image is up and running (Shown below)</li>
-                <li><strong>Then:</strong> Use the command "docker run -it ubuntu:latest /bin/bash" to log into you
-                    Docker Linux container with the bash shell (Shown Below).
+                <li><strong>First:</strong> Pull an Ubuntu image by using the command "docker pull ubuntu" (Shown
+                    below).
+                </li>
+                <li><strong>Then:</strong> Check to see that your Ubuntu image is downloaded and installed by using the
+                    command "docker images"(Shown below).
+                </li>
+                <li><strong>Finally:</strong> Use the command "docker run -it ubuntu:latest /bin/bash" to log into your
+                    Docker container that is running Ubuntu Linux with the bash shell (Shown Below).
                 </li>
             </ul>
             <p>
-                Below is an example of my executing the steps mentioned above and successfully logging into the
+                Below is an example of me executing the steps mentioned above and successfully logging into the
                 container:
             </p>
         </div>
