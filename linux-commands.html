@@ -54,6 +54,7 @@
     <div class="row">
         <div class="col-8">
             <h1>Basic Linux Commands</h1>
+            <h4>Linux Commands</h4>
             <p>
                 Linux is an operating system that was created by Linus Torvalds in 1991. This operating system sees
                 worldwide use, and has multiple distributions that millions of computers and servers run each day. Below
@@ -78,59 +79,81 @@
                 <tbody>
                 <tr>
                     <th scope="row">pwd</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command is used to print the path for your current directory.</td>
+                    <td>pwd</td>
                 </tr>
                 <tr>
                     <th scope="row">ls</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command lists the contents of your current directory.</td>
+                    <td>ls</td>
                 </tr>
                 <tr>
                     <th scope="row">cd</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command is used for navigation between directories.</td>
+                    <td>
+                        cd [directory name]
+                        <br>
+                        Change to the previous directory = "cd .."
+                        <br>
+                        Change to the root directory = "cd /"
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">cp</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command is used to copy files. This can be used to copy files in the same directory
+                        or to a different directory.
+                    </td>
+                    <td>
+                        cp [filename] [new filename]
+                        <br>
+                        cp [filename] [directory to copy to]
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">rm</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command is used to remove or delete files</td>
+                    <td>rm [filename]</td>
                 </tr>
                 <tr>
                     <th scope="row">mkdir</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command is used to create a new directory.</td>
+                    <td>mkdir [directory name]</td>
                 </tr>
                 <tr>
                     <th scope="row">rmdir</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command is used to remove an existing directory. Note: The directory that
+                        you plane to remove must be empty to use this command.
+                    </td>
+                    <td>rmdir [directory name]</td>
                 </tr>
                 <tr>
                     <th scope="row">rm -r</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This is an option for the "rm" command, talked
+                        about above. This should be used if you are trying to remove a directory that has content inside
+                        of it, since "rmdir" will not work in that instance.
+                    </td>
+                    <td>rm -r [directory name]</td>
                 </tr>
                 <tr>
                     <th scope="row">clear</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command is used to clear the screen of all previous commands and outputs. It is good to do
+                        this once you finish a task so you are not confused.
+                    </td>
+                    <td>clear</td>
                 </tr>
                 <tr>
                     <th scope="row">man</th>
-                    <td>example text</td>
-                    <td>example text</td>
+                    <td>This command is used to check out the "man" pages. These pages are a guide to what command you
+                        type in. When in doubt, visit the man pages!
+                    </td>
+                    <td>man [command]</td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
 <!-- JavaScript For Team Page -->
 <script language="JavaScript" type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
