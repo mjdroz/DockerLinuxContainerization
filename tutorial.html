@@ -79,7 +79,13 @@
                 do this you need to commit by running "docker commit (container ID) (new name)". Finally, run "docker
                 images" to make sure your new image, with its new name, is there.
             </p>
-
+            <h4>Step 4:</h4>
+            <p>
+                For this step, you need to bind a directory in the container to a directory on your local machine. This
+                can be done by running the command "docker run -it -p 127.0.0.1:80:80 -v (Local Directory
+                Path):(Container Directory Path)
+                ubuntu-my_apache2 /bin/bash" (shown below).
+            </p>
             <h4>Sources:</h4>
             <p>
                 <a href=""></a>
