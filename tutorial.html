@@ -54,19 +54,32 @@
     <div class="row">
         <div class="col-9">
             <h1>How To Set-Up A Web Server With Docker</h1>
-            <h4>Step 1</h4>
+            <h4>Step 1:</h4>
             <p>
                 Install Docker Engine (<a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install</a>)
                 (<a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a>) and make sure it
                 is running and working properly. A good way to do this
                 would be to run the command "docker run hello-world"!
             </p>
-            <h4>Step 2</h4>
+            <h4>Step 2:</h4>
             <p>
                 Pull an Ubuntu image using the command "docker pull ubuntu" (shown below). Then make sure this image is
                 installed and working by doing the command "docker images", which shows all of the images installed
                 (shown below).
             </p>
+            <h4>Step 3:</h4>
+            <p>
+                Run your Ubuntu image with the bash shell by running the command "docker run -it ubuntu:latest
+                /bin/bash". After, update Ubuntu by running "apt-get update". Then install apache2 by running "apt-get
+                install apache2". Finally, install vim by running "apt-get install vim". Then type "exit" to exit.
+            </p>
+            <p>
+                After those tasks are complete. Run "docker ps -a", and find the container that you were just in. Once
+                you
+                do this you need to commit by running "docker commit (container ID) (new name)". Finally, run "docker
+                images" to make sure your new image, with its new name, is there.
+            </p>
+
             <h4>Sources:</h4>
             <p>
                 <a href=""></a>
