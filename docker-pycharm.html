@@ -58,11 +58,19 @@
             <p>
                 Install Docker Engine (<a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install</a>)
                 (<a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a>) and make sure it
-                is running and working properly. Install the PyCharm Pro IDE (<a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a>).
+                is running and working properly. Install the PyCharm Pro IDE (<a
+                    href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a>).
             </p>
             <h4>Step 2:</h4>
             <p>
-
+                Once PyCharm is installed and open, you will need to create a few files in order to run a Python program
+                using Docker. Those files include a Python file (which will be run) and a Dockerfile (which will be used
+                to configure the container). After the files are created, you need to click on "Add Configuration" in
+                the top right of the IDE to add a Docker configuration. From there click on the "+" button and then
+                click on the "Docker" dropdown. Afterwards, click on "Dockerfile" and a configuration window should
+                appear. Fill out the directory you want to configure, the name of the Docker image, and the name of the
+                Docker container. After that make sure to check off the box that says "Run built image". When all of
+                this is done, click "apply" and "ok".
             </p>
             <h4>Step 3:</h4>
             <p>
