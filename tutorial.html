@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Nav Bar Code -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+
+    <a class="navbar-brand" href="index.html">Docker, Linux, and Containerization</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutpage.html">About Page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="teampage.html">Team Page</a>
+            </li>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Project Files
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="virtualization.html">Virtualization</a>
+                    <a class="dropdown-item" href="...">Containerization</a>
+                    <a class="dropdown-item" href="...">Virtualization vs. Containerization</a>
+                    <a class="dropdown-item active" href="tutorial.html">Creating Web Servers using Docker</a>
+                    <a class="dropdown-item" href="...">Basic Linux Commands</a>
+                    <a class="dropdown-item" href="...">Connecting Docker With PyCharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content here -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-9">
+            <h1>How To Set-Up A Web Server With Docker</h1>
+            <h4>Step 1:</h4>
+            <p>
+                Install Docker Engine (<a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install</a>)
+                (<a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a>) and make sure it
+                is running and working properly. A good way to do this
+                would be to run the command "docker run hello-world"!
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 35rem">
+                    <img class="card-img-top" src="tutorial-images/hello-world-1.PNG" alt="Hello World">
+                    <div class="card-body">
+                        <p class="card-text">Running hello-world to test Docker.</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Step 2:</h4>
+            <p>
+                Pull an Ubuntu image using the command "docker pull ubuntu" (shown below). Then make sure this image is
+                installed and working by doing the command "docker images", which shows all of the images installed
+                (shown below).
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 35rem">
+                    <img class="card-img-top" src="tutorial-images/ubuntu-2.PNG" alt="Pulling Ubuntu">
+                    <div class="card-body">
+                        <p class="card-text">Pulling Ubuntu image and checking to see if it is there.</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Step 3:</h4>
+            <h5>Part 1:</h5>
+            <p>
+                Run your Ubuntu image with the bash shell by running the command "docker run -it ubuntu:latest
+                /bin/bash". After, update Ubuntu by running "apt-get update". Then install apache2 by running "apt-get
+                install apache2". Finally, install vim by running "apt-get install vim". Then type "exit" to exit.
+            </p>
+            <!--Update-->
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 35rem">
+                    <img class="card-img-top" src="tutorial-images/update.PNG" alt="Update Ubuntu">
+                    <div class="card-body">
+                        <p class="card-text">Updating Ubuntu to the latest version.</p>
+                    </div>
+                </div>
+            </div>
+            <!--Install apache2-->
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 35rem">
+                    <img class="card-img-top" src="tutorial-images/apache2.PNG" alt="Install apache2">
+                    <div class="card-body">
+                        <p class="card-text">Installing apache2, which is what is going to run our web server.</p>
+                    </div>
+                </div>
+            </div>
+            <!--Install vim-->
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 35rem">
+                    <img class="card-img-top" src="tutorial-images/vim.PNG" alt="Install vim">
+                    <div class="card-body">
+                        <p class="card-text">Installing vim to create/edit files.</p>
+                    </div>
+                </div>
+            </div>
+            <h5>Part 2:</h5>
+            <p>
+                After those tasks are complete. Run "docker ps -a", and find the container that you were just in. Once
+                you
+                do this you need to commit by running "docker commit (container ID) (new name)". Finally, run "docker
+                images" to make sure your new image, with its new name, is there.
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 50rem">
+                    <img class="card-img-top" src="tutorial-images/commiting-3.PNG" alt="Committing New Container Name">
+                    <div class="card-body">
+                        <p class="card-text">Changing the Ubuntu image name to something more recognizable.</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Step 4:</h4>
+            <p>
+                For this step, you need to bind a directory in the container to a directory on your local machine. This
+                can be done by running the command "docker run -it -p 127.0.0.1:80:80 -v (Local Directory
+                Path):(Container Directory Path)
+                ubuntu-my_apache2 /bin/bash" (shown below).
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 50rem">
+                    <img class="card-img-top" src="tutorial-images/sharing-4.PNG" alt="Bind Image">
+                    <div class="card-body">
+                        <p class="card-text">Binding my local directory to the /var/www/html directory in the
+                            container</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Step 5:</h4>
+            <p>
+                Log into your Ubuntu container again by running the command "docker run -it ubuntu:latest /bin/bash".
+                Once inside of the container, change directory (cd) to the directory that you just binded in the
+                previous step. Once inside of the directory, create an index.html file that will be used to test the web
+                server. You can write what ever you please on this file, as it is only used to test that the web server
+                is working.
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 35rem">
+                    <img class="card-img-top" src="tutorial-images/index-image-5.PNG" alt="Image of index.html">
+                    <div class="card-body">
+                        <p class="card-text">This is the code for my test file (index.html).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 35rem">
+                    <img class="card-img-top" src="tutorial-images/file-in-users-5.PNG" alt="File in my directory">
+                    <div class="card-body">
+                        <p class="card-text">This shows the index.html in my local directory.</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Step 6:</h4>
+            <p>
+                After doing the previous step to create a test file, you now should restart apache2 from inside of the
+                Ubuntu container by running the command "/etc/init.d/apache2 restart". After you have restarted apache2,
+                visit 127.0.0.1 to see your live website, which is using your test file from earlier as the homepage.
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 35rem">
+                    <img class="card-img-top" src="tutorial-images/final-website-6.PNG" alt="Live Website">
+                    <div class="card-body">
+                        <p class="card-text">This is the live website!</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Sources:</h4>
+            <p>
+                <a href="https://njit.instructure.com/courses/13041/files/1309716?module_item_id=353106">Docker Command
+                    Line.pdf
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript For Team Page -->
+<script language="JavaScript" type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
