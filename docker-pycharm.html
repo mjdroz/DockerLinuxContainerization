@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connecting Docker With PyCharm</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Nav Bar Code -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+
+    <a class="navbar-brand" href="index.html">Docker, Linux, and Containerization</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutpage.html">About Page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="teampage.html">Team Page</a>
+            </li>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Project Files
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="virtualization.html">Virtualization</a>
+                    <a class="dropdown-item" href="...">Containerization</a>
+                    <a class="dropdown-item" href="...">Virtualization vs. Containerization</a>
+                    <a class="dropdown-item" href="tutorial.html">Creating Web Servers using Docker</a>
+                    <a class="dropdown-item" href="...">Basic Linux Commands</a>
+                    <a class="dropdown-item active" href="docker-pycharm.html">Connecting Docker With PyCharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content here -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-9">
+            <h1>How To Set-Up A Web Server With Docker</h1>
+            <h4>Step 1:</h4>
+            <p>
+                Install Docker Engine (<a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install</a>)
+                (<a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a>) and make sure it
+                is running and working properly. Install the PyCharm Pro IDE (<a
+                    href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a>).
+            </p>
+            <h4>Step 2:</h4>
+            <p>
+                Once PyCharm is installed and open, you will need to create a few files in order to run a Python program
+                using Docker. Those files include a Python file (which will be run) and a Dockerfile (which will be used
+                to configure the container). After the files are created, you need to click on "Add Configuration" in
+                the top right of the IDE to add a Docker configuration. From there click on the "+" button and then
+                click on the "Docker" dropdown. Afterwards, click on "Dockerfile" and a configuration window should
+                appear. Fill out the directory you want to configure, the name of the Docker image, and the name of the
+                Docker container. After that make sure to check off the box that says "Run built image". When all of
+                this is done, click "apply" and "ok".
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 55rem">
+                    <img class="card-img-top" src="pycharm-images/1.png" alt="Configuration Image">
+                    <div class="card-body">
+                        <p class="card-text">Setting up the Docker configuration in PyCharm.</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Step 3:</h4>
+            <h5>Part 1:</h5>
+            <p>
+                Click on the "services" tab at the bottom of the screen to make sure that Docker is pair correctly
+                (shown below). Also make sure that it says "Dockerfile" where "add configuration" was (shown below).
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 55rem">
+                    <img class="card-img-top" src="pycharm-images/2.png" alt="Configuration Image">
+                    <div class="card-body">
+                        <p class="card-text">Setting up the Docker configuration in PyCharm.</p>
+                    </div>
+                </div>
+            </div>
+            <h5>Part 2:</h5>
+            <p>
+                Click on the interpreters section on the bottom right of the screen. Then click "add an interpreter" and
+                a popup menu will appear (shown below). Click on the "Docker" button and then click "ok". This may take
+                a moment to
+                configure.
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 55rem">
+                    <img class="card-img-top" src="pycharm-images/2.5.png" alt="Configuration Image">
+                    <div class="card-body">
+                        <p class="card-text">Setting up the Docker configuration in PyCharm.</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Step 4:</h4>
+            <p>
+                Finally, click the play button in the top right corner of the screen to run the program. You should see
+                a
+                "build log" of the container gathering the necessary programs and libraries to run the Python code. Once
+                this is done, the container will then build the Docker image and run the program. To see the output of
+                the
+                program, click on the "Attached Console" tab next to the "Log" tab (shown below).
+            </p>
+            <div class="col-4 mt-3">
+                <div class="card" style="width: 55rem">
+                    <img class="card-img-top" src="pycharm-images/3.png" alt="Configuration Image">
+                    <div class="card-body">
+                        <p class="card-text">Setting up the Docker configuration in PyCharm.</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Sources:</h4>
+            <p>
+                All information was derived from the lecture on 10/13. All of the images were taken by Stanley.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript For Team Page -->
+<script language="JavaScript" type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
