@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Linux Commands</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Nav Bar Code -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+
+    <a class="navbar-brand" href="index.html">Docker, Linux, and Containerization</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutpage.html">About Page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="teampage.html">Team Page</a>
+            </li>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Project Files
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="virtualization.html">Virtualization</a>
+                    <a class="dropdown-item" href="containerization.html">Containerization</a>
+                    <a class="dropdown-item" href="comparison.html">Virtualization vs. Containerization</a>
+                    <a class="dropdown-item" href="...">Creating Web Servers using Docker </a>
+                    <a class="dropdown-item active" href="linux-commands.html">Basic Linux Commands</a>
+                    <a class="dropdown-item" href="...">Connecting Docker With PyCharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content here -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+            <h1>Basic Linux Commands</h1>
+            <h4>Linux Commands</h4>
+            <p>
+                Linux is an operating system that was created by Linus Torvalds in 1991. This operating system sees
+                worldwide use, and has multiple distributions that millions of computers and servers run each day. Below
+                are some basic commands, what they are, and how to use them.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Table for Linux Commands -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Command</th>
+                    <th scope="col">Definition</th>
+                    <th scope="col">Code Format</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">pwd</th>
+                    <td>This command is used to print the path for your current directory.</td>
+                    <td>pwd</td>
+                </tr>
+                <tr>
+                    <th scope="row">ls</th>
+                    <td>This command lists the contents of your current directory.</td>
+                    <td>ls</td>
+                </tr>
+                <tr>
+                    <th scope="row">cd</th>
+                    <td>This command is used for navigation between directories.</td>
+                    <td>
+                        cd [directory name]
+                        <br>
+                        Change to the previous directory = "cd .."
+                        <br>
+                        Change to the root directory = "cd /"
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">cp</th>
+                    <td>This command is used to copy files. This can be used to copy files in the same directory
+                        or to a different directory.
+                    </td>
+                    <td>
+                        cp [filename] [new filename]
+                        <br>
+                        cp [filename] [directory to copy to]
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">rm</th>
+                    <td>This command is used to remove or delete files</td>
+                    <td>rm [filename]</td>
+                </tr>
+                <tr>
+                    <th scope="row">mkdir</th>
+                    <td>This command is used to create a new directory.</td>
+                    <td>mkdir [directory name]</td>
+                </tr>
+                <tr>
+                    <th scope="row">rmdir</th>
+                    <td>This command is used to remove an existing directory. Note: The directory that
+                        you plane to remove must be empty to use this command.
+                    </td>
+                    <td>rmdir [directory name]</td>
+                </tr>
+                <tr>
+                    <th scope="row">rm -r</th>
+                    <td>This is an option for the "rm" command, talked
+                        about above. This should be used if you are trying to remove a directory that has content inside
+                        of it, since "rmdir" will not work in that instance.
+                    </td>
+                    <td>rm -r [directory name]</td>
+                </tr>
+                <tr>
+                    <th scope="row">clear</th>
+                    <td>This command is used to clear the screen of all previous commands and outputs. It is good to do
+                        this once you finish a task so you are not confused.
+                    </td>
+                    <td>clear</td>
+                </tr>
+                <tr>
+                    <th scope="row">man</th>
+                    <td>This command is used to check out the "man" pages. These pages are a guide to what command you
+                        type in. When in doubt, visit the man pages!
+                    </td>
+                    <td>man [command]</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--How to log into your docker container-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+            <h4>How To Log Into Your Docker Container</h4>
+            <p>
+                Once you have Docker installed and running properly, which can be tested using the hello-world image
+                that is
+                already prebuild, you will need to pull an Ubuntu image from Dockerhub. This image can be used to do a
+                plethora of different tasks, but one that can be of use is hosting an apache webserver. I will discuss
+                how to log into your Docker container that is running Ubuntu Linux below.
+            </p>
+            <ul>
+                <li><strong>First:</strong> Pull an Ubuntu image by using the command "docker pull ubuntu" (Shown
+                    below).
+                </li>
+                <li><strong>Then:</strong> Check to see that your Ubuntu image is downloaded and installed by using the
+                    command "docker images"(Shown below).
+                </li>
+                <li><strong>Finally:</strong> Use the command "docker run -it ubuntu:latest /bin/bash" to log into your
+                    Docker container that is running Ubuntu Linux with the bash shell (Shown Below).
+                </li>
+            </ul>
+            <p>
+                Below is an example of me executing the steps mentioned above and successfully logging into the
+                container:
+            </p>
+        </div>
+        <div class="col-8">
+            <div class="card" style="width: 35rem;">
+                <img class="card-img-top" src="linux-commands-image/docker-login-full.PNG" alt="Login image">
+                <div class="card-body">
+                    <p class="card-text">Executing the steps mentioned above. (Please ignore the other Docker images
+                        shown besides "ubuntu", as I am using them for another class)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Sources-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-8 mb-4">
+            <h1>Sources</h1>
+            <h4>Information Sources</h4>
+            <h6>Linux Commands</h6>
+            <a href="https://www.youtube.com/watch?v=IVquJh3DXUA">https://www.youtube.com/watch?v=IVquJh3DXUA</a>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">https://en.wikipedia.org/wiki/Linus_Torvalds</a>
+            <br>
+            <h6>How To Log Into Your Docker Container</h6>
+            <a href="https://njit.instructure.com/courses/13041/files/1309716?module_item_id=353106">Docker Command
+                Line.pdf</a>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript For Team Page -->
+<script language="JavaScript" type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
