@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Containerization</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<!-- Nav Bar Code -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+
+    <a class="navbar-brand" href="index.html">Docker, Linux, and Containerization</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutpage.html">About Page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="teampage.html">Team Page</a>
+            </li>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Project Files
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="virtualization.html">Virtualization</a>
+                    <a class="dropdown-item active" href="containerization.html">Containerization</a>
+                    <a class="dropdown-item" href="...">Virtualization vs. Containerization</a>
+                    <a class="dropdown-item" href="...">Creating Web Servers using Docker </a>
+                    <a class="dropdown-item" href="...">Basic Linux Commands</a>
+                    <a class="dropdown-item" href="...">Connecting Docker With PyCharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Content here -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-8">
+            <h1>Containerization</h1>
+            <h4>What is Containerization?</h4>
+            <p>
+                Containerization is the process of encapsulating and packaging up software code into “containers” that
+                are given instructions to be able to run that code. Containers are the run environments for that
+                software code. They can be compared to something portable like CDs because they can be easily used and
+                accessed from any computing environment with little to no problems.
+            </p>
+            <h4>Example of Containerization</h4>
+            <p>
+                Containerization can be used anywhere and everywhere because of the little amount of memory that it
+                uses, compared to virtualization. One use can be taking legacy applications and splitting them up into
+                multiple containers. Doing this can make patching the application easier and more efficient in the long
+                run.
+            </p>
+            <h4>Why do we use it?</h4>
+            <p>
+                We use containerization because it provides a plethora of advantages to developers when compared to
+                virtualization.
+                Some of these advantages are:
+            <ul>
+                <li><strong> Portability: </strong> Containers take software and make it an executable package that can
+                    be downloaded and
+                    used on any computer system, platform, or cloud. This is because containers are not dependent on the
+                    host operating system (OS) or the tied to it.
+                </li>
+                <li><strong> Speed: </strong> Since containers are not dependent on a host OS, servers that run your
+                    containers can save
+                    time by not having to boot a separate OS. This is because containers run on local machines OS
+                    kernel.
+                </li>
+                <li><strong> Fault Isolation: </strong> Each container is running separately from other containers. This
+                    means that the
+                    failure of
+                    one container will not prevent the other containers from running. This also allows for development
+                    teams to resolve issues with on container without having to shutdown the other containers that are
+                    already running.
+                </li>
+                <li><strong> Efficiency: </strong> Since containers are using the host machine's OS kernel, there is a
+                    substantial amount
+                    of containers that can run on the same computing power as a single VM. In turn, this allows for more
+                    programs and applications to be running.
+                </li>
+                <li><strong> Ease of Management: </strong> When managing the software within containers, it is easy to
+                    push updates and
+                    add more features because each container is not dependent on the others in order to run. This can
+                    help when dealing with a large scale project that is using multiple containers to provide a service.
+                </li>
+                <li><strong> Security: </strong> As mentioned before, containers run separately from each other. This
+                    helps with security
+                    because if a malicious software was to make its way into the application it would only be able to
+                    spread as far as the container that it was able to gain access to.
+                </li>
+            </ul>
+            </p>
+            <h4>Sources:</h4>
+            <h5>Information Sources:</h5>
+            <p>
+                <a href="https://www.docker.com/resources/what-container">
+                    https://www.docker.com/resources/what-container</a>
+            </p>
+            <p>
+                <a href="https://www.ibm.com/cloud/learn/containerization">
+                    https://www.ibm.com/cloud/learn/containerization</a>
+            </p>
+            <p>
+                <a href="https://blog.stackpath.com/containers/"> https://blog.stackpath.com/containers/</a>
+            </p>
+            <h5>Image Source:</h5>
+            <p>
+                <a href="https://www.docker.com/resources/what-container">
+                    https://www.docker.com/resources/what-container</a>
+            </p>
+        </div>
+        <!--Containerization Image-->
+        <div class="col-4 mt-3">
+            <div class="card" style="width: 24rem;">
+                <img class="card-img-top" src="containerization-images/containerization.png"
+                     alt="Containerization image">
+                <div class="card-body">
+                    <p class="card-text">Diagram showing how containerization works. In the picture, there are six
+                        applications that are being run in Docker containers, which use the host OS and infrastructure
+                        to run.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript For Team Page -->
+<script language="JavaScript" type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
